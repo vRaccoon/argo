@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: overlord
+  name: app-nginx
   namespace: argocd
 spec:
   destination:
-    namespace: argocd
+    namespace: nginx-argo
     server: https://kubernetes.default.svc
   project: default
   sources:                                          # new field
     - repoURL: https://github.com/vRaccoon/argo.git
       targetRevision: main
-      path: ./apps
+      path: ./nginx
   syncPolicy:
     automated: {}
