@@ -13,4 +13,7 @@ spec:
       targetRevision: main
       path: ./apps
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
+      selfHeal: true
+
