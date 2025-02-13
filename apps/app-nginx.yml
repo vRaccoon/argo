@@ -13,4 +13,4 @@ spec:
       targetRevision: main
       path: ./nginx
   syncPolicy:
-    automated: {}
+    - CreateNamespace=true
